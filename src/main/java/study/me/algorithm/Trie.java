@@ -1,4 +1,4 @@
-package study.me;
+package study.me.algorithm;
 
 /**
  * @author hongxin
@@ -21,9 +21,10 @@ public class Trie {
             }
             p = p.getChildren()[index];
         }
-        p.isEndingChar = true;
+        p.isEndingChar = true; //标示字符串结尾
     }
 
+    // 查询指定字符串是否存在
     public boolean find(char[] pattren) {
         TrieNode p = root;
         for (int i = 0; i < pattren.length; i++) {
@@ -33,7 +34,7 @@ public class Trie {
             }
             p = p.getChildren()[index];
         }
-        if (!p.isEndingChar()) {
+        if (!p.isEndingChar()) { //不能完全匹配，只是前缀
             return false;
         }else {
             return true;

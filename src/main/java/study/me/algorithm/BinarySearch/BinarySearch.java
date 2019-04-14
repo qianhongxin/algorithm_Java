@@ -1,4 +1,4 @@
-package study.me.BinarySearch;
+package study.me.algorithm.BinarySearch;
 
 /**
  * @author hongxin
@@ -19,7 +19,7 @@ public class BinarySearch {
         // 条件是 <=
         while(low <= high) {
             // 防止溢出，等价于（low + high）/2
-            mid = low + (high - low) >> 1;
+            mid = low + ((high - low) >> 1);
             if(target == arr[mid]) {
                 return mid;
             }else if(target > arr[mid]) {
@@ -41,7 +41,7 @@ public class BinarySearch {
         int low = 0, high = arr.length - 1;
         int mid;
         while (low <= high) {
-            mid = low + (high - low) >> 1;
+            mid = low + ((high - low) >> 1);
             if(arr[mid] > target) {
                 high = mid - 1;
             }else if(arr[mid] < target) {
@@ -59,7 +59,7 @@ public class BinarySearch {
     }
 
     /**
-     * @author hongxin fixme
+     * @author hongxin
      * @description: 查找最后一个等于给定值的下标
      * @time 2019/4/12
      **/
@@ -67,7 +67,7 @@ public class BinarySearch {
         int low = 0, high = arr.length - 1;
         int mid;
         while (low <= high) {
-            mid = low + (high - low) >> 1;
+            mid = low + ((high - low) >> 1);
             if(arr[mid] > target) {
                 high = mid - 1;
             }else if(arr[mid] < target) {
@@ -93,7 +93,7 @@ public class BinarySearch {
         int low = 0, high = arr.length - 1;
         int mid;
         while (low <= high) {
-            mid = low + (high - low) >> 1;
+            mid = low + ((high - low) >> 1);
             if(arr[mid] >= target) {
                 if(mid == 0 || arr[mid - 1] < target) {
                     return mid;
@@ -117,7 +117,7 @@ public class BinarySearch {
         int low = 0, high = arr.length - 1;
         int mid;
         while (low <= high) {
-            mid = low + (high - low) >> 1;
+            mid = low + ((high - low) >> 1);
             if(arr[mid] <= target) {
                 if(mid == arr.length - 1 || arr[mid + 1] > target) {
                     return mid;
@@ -149,7 +149,7 @@ public class BinarySearch {
         }
 
         // 逻辑处理
-        int mid = low + (high - low) >> 1;
+        int mid = low + ((high - low) >> 1);
 
         // 进入下一层
         if(arr[mid] == target) {
@@ -165,6 +165,6 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 3, 4, 5};
-        System.out.println(searchLastEqual(arr, 3));
+        System.out.println(searchLastLE(arr, 3));
     }
 }

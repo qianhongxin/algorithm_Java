@@ -1,3 +1,17 @@
+此项目包括数据结构，算法，leetcode的学习整理。
+
+
+待解决：
 https://mp.weixin.qq.com/s/QgkBRoADcO8Wgj0dHCc9dw
 
 https://mp.weixin.qq.com/s/4BZOzbPq7D1b_mYmKQJECQ
+
+循环连表
+
+双向链表
+
+java的阻塞队列，并发队列等结构
+
+总结：
+基于数组实现的数据结构，多数不用额外指针辅助操作，数组下标就是索引
+链式的数据结构需要
