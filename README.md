@@ -1,2 +1,2 @@
 # algorithm_Java
-java语言实现的一些基础算法
+java语言实现的基础算法和数据结构
