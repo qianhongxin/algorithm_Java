@@ -20,7 +20,7 @@ public class BrackeMatching {
     private Map<Character, Character> brackes;
 
     public BrackeMatching() {
-        brackes = new HashMap<>();
+        brackes = new HashMap<Character, Character>();
 
         brackes.put(')', '(');
         brackes.put(']', '[');
@@ -33,7 +33,7 @@ public class BrackeMatching {
             return true;
         }
 
-        Map<Character, Character> brackes = new HashMap<>();
+        Map<Character, Character> brackes = new HashMap<Character, Character>();
         brackes.put('(', ')');
         brackes.put('[', ']');
         brackes.put('{', '}');
@@ -80,7 +80,7 @@ public class BrackeMatching {
             return true;
         }
 
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<Character>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if(this.brackes.containsKey(c)) {
