@@ -1,5 +1,10 @@
-package study.me.algorithm;
+package study.me.algorithm.sort;
 
+/**
+ * @author 32415
+ * @description: 冒泡排序，时间复杂度O(n2) (平均时间复杂度)
+ * @time 2019/4/15
+ **/
 public class BubbleSort {
 
     public static void sort(int[] arr) {
